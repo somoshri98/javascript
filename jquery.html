@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="edit">
+        Write here.
+    </div>
+    <!-- font color -->
+    Select font-color:
+    <select name="" id="fcolor">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+    </select>
+    <br>
+    <!-- font size -->
+    Select font-size:
+    <select name="" id="fsize">
+        <option value="30px">30</option>
+        <option value="40px">40</option>
+        <option value="50px">50</option>
+    </select>
+    <br>
+    <!-- border style-->
+    Select border-style:
+    <select name="" id="bstyle">
+        <option value="solid">solid</option>
+        <option value="dashed">dashed</option>
+    </select>
+    <br>
+    <!-- border color -->
+    Select border-color:
+    <select name="" id="bcolor">
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="violet">violet</option>
+    </select>
+    <br>
+    <button id="apply">Apply</button>
+</body>
+<script>
+    $('#apply').click(function(){
+        $('#edit').css({
+            "color":$('#fcolor').val(),
+            "font-size":$('#fsize').val(),
+            "border-style":$('#bstyle').val(),
+            "border-color":$('#bcolor').val()
+        });
+    });
+</script>
+
+</html>
